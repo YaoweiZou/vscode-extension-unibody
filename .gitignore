@@ -1,0 +1,13 @@
+/node_modules
+/*.vsix
+
+# misc
+/.fleet
+/.idea
+/.vscode
+.DS_Store
+._*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -1,0 +1,29 @@
+{
+    "name": "unibody",
+    "version": "0.0.2",
+    "displayName": "Unibody",
+    "publisher": "YaoweiZou",
+    "author": {
+        "name": "YaoweiZou"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "description": "Unibody",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Unibody",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Unibody-color-theme.json"
+            }
+        ]
+    }
+}
