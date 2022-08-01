@@ -1,6 +1,7 @@
 {
     "name": "unibody",
-    "version": "0.0.3",
+    "version": "0.0.4",
+    "icon": "assets/icon.png",
     "displayName": "Unibody",
     "publisher": "YaoweiZou",
     "author": {
