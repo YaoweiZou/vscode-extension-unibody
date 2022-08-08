@@ -4,25 +4,29 @@
 
 A theme extension for Visual Studio Code based on default dark theme.
 
-TokenColors from <a link="https://github.com/Mohamed3nan/jetbrains-darcula-theme">Mohamed3nan</a>.
+## Installation
 
-## Screenshots
-
-nofolder
-
-![screenshot-nofolder](./assets/img/no-folder.png)
-
-folder-1
-
-![screenshot-folder-1](./assets/img/folder-1.png)
-
-folder-2
-
-![screenshot-folder-2](./assets/img/folder-2.png)
+[Download](https://marketplace.visualstudio.com/items?itemName=YaoweiZou.unibody) from Microsoft Marketplace.
 
 ## Build
-need global install `vsce`
+
+Require global install `vsce`.
+
 ```
 cd vscode-extension-unibody
 vsce package
 ```
+
+## Changelog
+
+[changelog](./CHANGELOG.md)
+
+## Screenshots
+
+![screenshot-folder-1](./assets/screenshots/folder-1.png)
+
+[view all screenshots](./assets/screenshots)
+
+## Contributing
+
+- TokenColors from [Mohamed3nan](https://github.com/Mohamed3nan/jetbrains-darcula-theme).
