@@ -11,7 +11,7 @@
         "type": "git",
         "url": "https://github.com/YaoweiZou/vscode-extension-unibody"
     },
-    "description": "Unibody",
+    "description": "Unibody dark theme.",
     "engines": {
         "vscode": "^1.69.0"
     },

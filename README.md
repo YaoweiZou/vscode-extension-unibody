@@ -2,7 +2,7 @@
 
 ## Description
 
-A theme extension for Visual Studio Code based on default dark theme.
+A dark theme extension for Visual Studio Code based on default dark theme.
 
 ## Installation
 
