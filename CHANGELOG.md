@@ -1,10 +1,10 @@
 # Change Log
 
-All notable changes to the "com-yaoweizou-unibody" extension will be documented in this file.
+## [1.1.0] - 2022-09-02
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Changed
 
-## [Unreleased]
+- Change statusbar remote background to "#317ac6" from "#16825d".
 
 ## [1.0.0] - 2022-08-08
 
