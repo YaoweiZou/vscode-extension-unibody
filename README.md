@@ -2,7 +2,7 @@
 
 ## Description
 
-A dark theme extension for Visual Studio Code based on default dark theme.
+A theme extension for Visual Studio Code based on default theme.
 
 ## Installation
 
@@ -14,7 +14,7 @@ A dark theme extension for Visual Studio Code based on default dark theme.
 
 ## Screenshots
 
-![screenshot-folder-1](./assets/screenshots/folder-1.png)
+![screenshot-folder-1](./assets/screenshots/screenshot-1.png)
 
 [view all screenshots](./assets/screenshots)
 

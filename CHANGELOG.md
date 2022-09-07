@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.0] - 2022-09-07
+
+### Addeed
+
+- Support light theme.
+
 ## [1.1.0] - 2022-09-02
 
 ### Changed

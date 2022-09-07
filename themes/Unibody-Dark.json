@@ -1,5 +1,5 @@
 {
-    "name": "Unibody",
+    "name": "Unibody Dark",
     "type": "dark",
     "semanticHighlighting": true,
     "colors": {
@@ -36,7 +36,7 @@
         "sideBarTitle.foreground": "#ffffff",
         "statusBar.background": "#222222",
         "statusBar.debuggingBackground": "#db5c5c",
-        "statusBar.debuggingForeground": "#cccccc",
+        "statusBar.debuggingForeground": "#ffffff",
         "statusBar.focusBorder": "#666666",
         "statusBar.foreground": "#cccccc",
         "statusBar.noFolderBackground": "#68217a",
