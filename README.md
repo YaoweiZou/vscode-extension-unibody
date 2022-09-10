@@ -35,4 +35,4 @@ vsce package
 
 ## Contributing
 
-- TokenColors from [Mohamed3nan](https://github.com/Mohamed3nan/jetbrains-darcula-theme).
+- Unibody Dark TokenColors from [Mohamed3nan](https://github.com/Mohamed3nan/jetbrains-darcula-theme).

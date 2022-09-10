@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.1.0] - 2022-09-08
+
+### Changed
+
+- New icon.
+
+- Update dark and light theme.
+
+- Change tokenColor to vscode default light theme from GitHub Theme Light.
+
 ## [2.0.0] - 2022-09-07
 
 ### Addeed
