@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.1.3] - 2022-09-13
+
+### Changed
+
+- Change button color
+
 ## [2.1.2] - 2022-09-11
 
 ### Changed
