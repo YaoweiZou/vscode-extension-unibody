@@ -46,7 +46,7 @@
         "list.activeSelectionForeground": "#ffffff",
         "list.activeSelectionIconForeground": "#ffffff",
         "list.dropBackground": "#333333",
-        "list.hoverBackground": "#333333",
+        "list.hoverBackground": "#293d51",
         "menu.background": "#222222",
         "menu.border": "#666666",
         "menu.foreground": "#cccccc",

@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.1.4] - 2022-09-14
+
+### Fixed
+
+- list hover background color
+
 ## [2.1.3] - 2022-09-13
 
 ### Changed
