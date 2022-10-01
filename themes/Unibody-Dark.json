@@ -64,9 +64,6 @@
         "minimap.selectionHighlight": "#0a84fe",
         "minimap.selectionOccurrenceHighlight": "#cccccc",
         "minimap.warningHighlight": "#bf8803",
-        "minimapSlider.activeBackground": "#64646425",
-        "minimapSlider.background": "#ffffff15",
-        "minimapSlider.hoverBackground": "#64646435",
         "ports.iconRunningProcessForeground": "#369432",
         "scrollbar.shadow": "#ffffff00",
         "searchEditor.findMatchBackground": "#32593d",
@@ -103,6 +100,35 @@
         "titleBar.inactiveForeground": "#999999"
     },
     "tokenColors": [
+        {
+            "name": "comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#808080"
+            }
+        },
+        {
+            "name": "block comments",
+            "scope": "comment.block",
+            "settings": {
+                "foreground": "#808080"
+            }
+        },
+        {
+            "name": "doc comments",
+            "scope": "comment.block.documentation",
+            "settings": {
+                "foreground": "#629755",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "line comments",
+            "scope": "comment.line",
+            "settings": {
+                "foreground": "#808080"
+            }
+        },
         {
             "name": "unison punctuation",
             "scope": "punctuation.definition.delayed.unison,punctuation.definition.list.begin.unison,punctuation.definition.list.end.unison,punctuation.definition.ability.begin.unison,punctuation.definition.ability.end.unison,punctuation.operator.assignment.as.unison,punctuation.separator.pipe.unison,punctuation.separator.delimiter.unison,punctuation.definition.hash.unison",
@@ -297,14 +323,6 @@
             "scope": "meta.definition.variable.js",
             "settings": {
                 "foreground": "#9876AA"
-            }
-        },
-        {
-            "name": "js/ts Doc",
-            "scope": "comment.block.documentation",
-            "settings": {
-                "foreground": "#629755",
-                "fontStyle": "italic"
             }
         },
         {
@@ -2084,13 +2102,6 @@
             ],
             "settings": {
                 "foreground": "#808080"
-            }
-        },
-        {
-            "name": "Comments",
-            "scope": "comment, punctuation.definition.comment",
-            "settings": {
-                "foreground": "#7f848e"
             }
         },
         {

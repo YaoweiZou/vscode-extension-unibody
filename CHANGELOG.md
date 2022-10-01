@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.1.5] - 2022
+
+### Fixed
+
+- fixed doc comment color error for dark theme
+
+- removed minimap slider color for dark theme
+
+- changed token color for light theme
+
 ## [2.1.4] - 2022-09-14
 
 ### Fixed
