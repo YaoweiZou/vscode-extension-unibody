@@ -11,7 +11,7 @@
         "type": "git",
         "url": "https://github.com/YaoweiZou/vscode-extension-unibody"
     },
-    "description": "Unibody theme. Support dark and light.",
+    "description": "Unibody themes for VS Code. Support dark and light.",
     "engines": {
         "vscode": "^1.69.0"
     },
@@ -23,13 +23,26 @@
             {
                 "label": "Unibody Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Unibody-Dark.json"
+                "path": "./themes/unibody-dark.json"
             },
             {
                 "label": "Unibody Light",
                 "uiTheme": "vs",
-                "path": "./themes/Unibody-Light.json"
+                "path": "./themes/unibody-light.json"
             }
         ]
+    },
+    "devDependencies": {
+        "@primer/primitives": "^7.11.5",
+        "@vscode/vsce": "^2.18.0",
+        "chroma-js": "^2.4.2",
+        "color": "^4.2.3",
+        "nodemon": "^2.0.22"
+    },
+    "scripts": {
+        "start": "nodemon --watch src src/index.js",
+        "build": "node src/index.js && mkdir -p build",
+        "package": "vsce package -o ./build/unibody-theme.vsix",
+        "prepublishOnly": "npm run build && vsce public"
     }
 }
