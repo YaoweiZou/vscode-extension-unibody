@@ -1,0 +1,72 @@
+"workbench.colorCustomizations": {
+    // --- other
+    "scrollbar.shadow": "#ffffff00",
+    "tab.activeBackground": "#f2f2f714", // light.gray6 10%
+    // --- dark.gary6 #1c1c1e
+    "tab.border": "#1c1c1e",
+    "editor.background": "#1c1c1e",
+    "editorHoverWidget.background": "#1c1c1e",
+    "panel.background": "#1c1c1e",
+    "terminal.background": "#1c1c1e",
+    "breadcrumb.background": "#1c1c1e",
+    "sideBar.background": "#1c1c1e",
+    "sideBarSectionHeader.border": "#1c1c1e",
+    "minimap.background": "#1c1c1e",
+    "activityBar.background": "#1c1c1e",
+    "statusBar.background": "#1c1c1e",
+    "tab.inactiveBackground": "#1c1c1e",
+    "titleBar.activeBackground": "#1c1c1e",
+    "titleBar.inactiveBackground": "#1c1c1e",
+    "editorGroupHeader.tabsBackground": "#1c1c1e",
+    "menu.background": "#1c1c1e",
+    "sideBarSectionHeader.background": "#1c1c1e",
+    // "minimapGutter.addedBackground": "#ff0000",
+    // "editor.foldBackground": "#ff0000", // 折叠代码块颜色
+    // "editorGutter.foldingControlForeground": "#ff0000",// 折叠控件颜色
+    // "editorGutter.": "#ff0000",
+    // "list.hoverBackground": "#ff0000",
+    // "sash.hoverBorder": "#ff0000",
+    // "toolbar.hoverBackground": "#ff0000",
+    "editorIndentGuide.background": "#1c1c1e",
+    // --- dark.gary3 #48484a
+    "editorIndentGuide.activeBackground": "#32d74b79", //bak: #48484a
+    "editorRuler.foreground": "#48484a",
+    // --- dark.gary4 #3a3a3c
+    // "sideBar.border": "#3a3a3c",
+    // "sideBar.border": "#1c1c1e",
+    // --- light.gray2 #aeaeb2
+    "tab.inactiveForeground": "#aeaeb2",
+    "tab.unfocusedInactiveForeground": "#aeaeb2",
+    "editorGroup.border": "#aeaeb2", // move to light.gray1
+    // --- light.gray3 #c7c7cc
+    "tab.unfocusedActiveForeground": "#c7c7cc",
+    // --- light.gary4 #d1d1d6
+    "sideBar.foreground": "#d1d1d6",
+    "titleBar.activeForeground": "#d1d1d6",
+    "menu.foreground": "#d1d1d6",
+    "statusBar.foreground": "#d1d1d6",
+    "editorHoverWidget.foreground": "#d1d1d6",
+    // --- light.gary5 #e5e5ea
+    "tab.activeForeground": "#e5e5ea",
+    "sideBarSectionHeader.foreground": "#e5e5ea",
+    // ---
+    // "editorCursor.foreground": "#fff"
+    // "menu.selectionBackground": "#5ac8f5",
+    // "tab.activeBorder": "#5ac8f5", // unaci #5a5d63 #3574f0
+    // #2e436e list-hover
+    // #3574f0 button
+    // --- git
+    "gitDecoration.ignoredResourceForeground": "#636366", // 忽略的文件，dark.gary2
+    "gitDecoration.untrackedResourceForeground": "#32d74b", // 新增的文件，dark.green
+    "gitDecoration.addedResourceForeground": "#32d74b79", // 新增且暂存的文件，dark.green 62%
+    "gitDecoration.modifiedResourceForeground": "#5ac8f5", // 修改的文件和存在问题的文件，dark.cyan，
+    "gitDecoration.stageModifiedResourceForeground": "#5ac8f579", // 修改且暂存的文件，dark.cyan 62%
+    "gitDecoration.deletedResourceForeground": "#ff453a", // 已删除的文件，dark.red划线
+    "gitDecoration.stageDeletedResourceForeground": "#ff453a", // 已删除且暂存的文件，dark.red划线
+    "gitDecoration.conflictingResourceForeground": "#ffd60a", // 存在冲突的文件，dark.yellow
+    "gitDecoration.renamedResourceForeground": "#ff9f0a", // 重命名或复制的二进制文件，dark.orange
+    "gitDecoration.submoduleResourceForeground": "#ac8e68", // 子模块文件，dark.brown
+    "minimapGutter.modifiedBackground": "#5ac8f5",
+    "minimapGutter.addedBackground": "#32d74b",
+    "minimapGutter.deletedBackground": "#ff453a"
+},

@@ -1,4 +1,6 @@
+.git
+.gitignore
 .vscode/**
 .vscode-test/**
-.gitignore
+
 assets/*.psd
