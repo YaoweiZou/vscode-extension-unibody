@@ -14,73 +14,120 @@ function getColors(theme) {
 
 function getTheme({ theme, name }) {
   const color = getColors(theme);
-  console.log(color.white);
 
   return {
     name: name,
     colors: {
+      /* Base colors */
       focusBorder: color.blue70,
       foreground: color.gray120,
-      descriptionForeground: color.gray80,
-      errorForeground: color.red50,
+      "disabledForeground": color.gray70,
+      // "widget.border": ,
+      // "widget.shadow": ,
+      "selection.background": color.blue40,
+      "descriptionForeground": color.gray90,
+      "errorForeground": color.red50,
+      "icon.foreground": color.gray120,
+      // "sash.hoverBorder": "",
 
-      // "textLink.foreground": "",
-      // "textLink.activeForeground": "",
+      /* Window border */
+      // "window.activeBorder": "",
+      // "window.inactiveBorder": "",
+
+      /* Text colors */
       // "textBlockQuote.background": "",
       // "textBlockQuote.border": "",
       // "textCodeBlock.background": "",
+      // "textLink.activeForeground": "",
+      "textLink.foreground": color.blue100,
       // "textPreformat.foreground": "",
       // "textSeparator.foreground": "",
+
+      /* Action colors */
+      // "toolbar.hoverBackground": "",
+      // "toolbar.hoverOutline": "",
+      // "toolbar.activeBackground": "",
+
+      /* Button control */
+      "button.background": color.blue70,
+      "button.foreground": color.gray120,
+      // "button.border": transparent,
+      // "button.separator": "",
+      "button.hoverBackground": color.blue60,
+      // "button.secondaryForeground": "",
+      // "button.secondaryBackground": "",
+      // "button.secondaryHoverBackground": "",
+      "checkbox.background": color.gray20,
+      "checkbox.foreground": color.white,
+      "checkbox.border": color.gray70,
+      // "checkbox.selectBackground": "",
+      // "checkbox.selectBorder": "",
+
+      /* Dropdown control */
+      "dropdown.background": color.gray20,
+      "dropdown.listBackground": color.gray20,
+      "dropdown.border": color.gray60,
+      // "dropdown.foreground": "",
+
+      /* Input control */
+      "input.background": color.gray20,
+      "input.border": color.gray60,
+      "input.foreground": color.gray120,
+      "input.placeholderForeground": color.gray80,
+      // "inputOption.activeBackground": "",
+      // "inputOption.activeBorder": "",
+      // "inputOption.activeForeground": "",
+      // "inputOption.hoverBackground": "",
+      // "inputValidation.errorBackground": "",
+      // "inputValidation.errorForeground": "",
+      // "inputValidation.errorBorder": "",
+      // "inputValidation.infoBackground": "",
+      // "inputValidation.infoForeground": "",
+      // "inputValidation.infoBorder": "",
+      // "inputValidation.warningBackground": "",
+      // "inputValidation.warningForeground": "",
+      // "inputValidation.warningBorder": "",
 
       // "icon.foreground": "",
       // "keybindingLabel.foreground": "",
 
-      // "button.background": "",
-      // "button.foreground": "",
-      // "button.hoverBackground": "",
-
-      // "button.secondaryBackground": "",
-      // "button.secondaryForeground": "",
-      // "button.secondaryHoverBackground": "",
-
-      // "checkbox.background": "",
-      // "checkbox.border": "",
-
-      // "dropdown.background": "",
-      // "dropdown.border": "",
-      // "dropdown.foreground": "",
-      // "dropdown.listBackground": "",
-
-      // "input.background": "",
-      // "input.border": "",
-      // "input.foreground": "",
-      // "input.placeholderForeground": "",
-
-      // "badge.foreground": "",
-      // "badge.background": "",
+      // "badge.foreground": ,
+      // "badge.background": ,
 
       // "progressBar.background": "",
 
-      // "titleBar.activeForeground": "",
-      // "titleBar.activeBackground": "",
+      "titleBar.activeForeground": color.gray120,
+      "titleBar.activeBackground": color.gray10,
       // "titleBar.inactiveForeground": "",
-      // "titleBar.inactiveBackground": "",
+      "titleBar.inactiveBackground": color.gray10,
       // "titleBar.border": "",
 
-      // "activityBar.foreground": "",
+      /* Menu Bar colors */
+      // "menubar.selectionForeground": "",
+      // "menubar.selectionBackground": "",
+      // "menubar.selectionBorder": "",
+      // "menu.foreground": "",
+      "menu.background": color.gray20,
+      // "menu.selectionForeground": "",
+      "menu.selectionBackground": color.blue40,
+      // "menu.selectionBorder": "",
+      // "menu.separatorBackground": "",
+      // "menu.border": "",
+
+      "activityBar.foreground": color.gray120,
       // "activityBar.inactiveForeground": "",
-      // "activityBar.background": "",
+      "activityBar.background": color.gray10,
       // "activityBarBadge.foreground": "",
       // "activityBarBadge.background": "",
-      // "activityBar.activeBorder": "",
+      "activityBar.activeBorder": color.gray10,
       // "activityBar.border": "",
 
-      // "sideBar.foreground": "",
-      // "sideBar.background": "",
-      // "sideBar.border": "",
-      // "sideBarTitle.foreground": "",
-      // "sideBarSectionHeader.foreground": "",
-      // "sideBarSectionHeader.background": "",
+      "sideBar.foreground": color.gray120,
+      "sideBar.background": color.gray10,
+      "sideBar.border": color.gray50,
+      "sideBarTitle.foreground": color.gray120,
+      "sideBarSectionHeader.foreground": color.gray120,
+      "sideBarSectionHeader.background": color.gray10,
       // "sideBarSectionHeader.border": "",
 
       // "list.hoverForeground": "",
@@ -110,10 +157,10 @@ function getTheme({ theme, name }) {
       // "quickInput.background": "",
       // "quickInput.foreground": "",
 
-      // "statusBar.foreground": "",
-      // "statusBar.background": "",
+      "statusBar.foreground": color.gray120,
+      "statusBar.background": color.gray10,
       // "statusBar.border": "",
-      // "statusBar.focusBorder": "",
+      "statusBar.focusBorder": color.blue70,
       // "statusBar.noFolderBackground": "",
       // "statusBar.debuggingForeground": "",
       // "statusBar.debuggingBackground": "",
@@ -124,38 +171,38 @@ function getTheme({ theme, name }) {
       // "statusBarItem.activeBackground": "",
       // "statusBarItem.focusBorder": "",
 
-      // "editorGroupHeader.tabsBackground": "",
+      "editorGroupHeader.tabsBackground": color.gray10,
       // "editorGroupHeader.tabsBorder": "",
       // "editorGroup.border": "",
 
-      // "tab.activeForeground": "",
-      // "tab.inactiveForeground": "",
-      // "tab.inactiveBackground": "",
-      // "tab.activeBackground": "",
+      "tab.activeForeground": color.gray120,
+      "tab.inactiveForeground": color.gray120,
+      "tab.inactiveBackground": color.gray10,
+      "tab.activeBackground": color.gray30,
       // "tab.hoverBackground": "",
       // "tab.unfocusedHoverBackground": "",
-      // "tab.border": "",
+      "tab.border": color.transparent,
       // "tab.unfocusedActiveBorderTop": "",
       // "tab.activeBorder": "",
       // "tab.unfocusedActiveBorder": "",
-      // "tab.activeBorderTop": "",
+      // "tab.activeBorderTop": color.gray120,
 
       // "breadcrumb.foreground": "",
       // "breadcrumb.focusForeground": "",
       // "breadcrumb.activeSelectionForeground": "",
       // "breadcrumbPicker.background": "",
 
-      // "editor.foreground": "",
-      // "editor.background": "",
+      "editor.foreground": color.gray120,
+      "editor.background": color.gray10,
       // "editorWidget.background": "",
       // "editor.foldBackground": "",
-      // "editor.lineHighlightBackground": "",
-      // "editor.lineHighlightBorder": "",
-      // "editorLineNumber.foreground": "",
-      // "editorLineNumber.activeForeground": "",
+      "editor.lineHighlightBackground": color.gray20,
+      // "editor.lineHighlightBorder": color.gray20,
+      "editorLineNumber.foreground": color.gray70,
+      "editorLineNumber.activeForeground": color.gray110,
       // "editorIndentGuide.background": "",
       // "editorIndentGuide.activeBackground": "",
-      // "editorWhitespace.foreground": "",
+      "editorWhitespace.foreground": color.gray60,
       // "editorCursor.foreground": "",
 
       // "editor.findMatchBackground": "",
@@ -188,7 +235,7 @@ function getTheme({ theme, name }) {
       // "diffEditor.removedLineBackground": "",
       // "diffEditor.removedTextBackground": "",
 
-      // "scrollbar.shadow": "",
+      "scrollbar.shadow": color.transparent
       // "scrollbarSlider.background": "",
       // "scrollbarSlider.hoverBackground": "",
       // "scrollbarSlider.activeBackground": "",
@@ -302,7 +349,7 @@ function getTheme({ theme, name }) {
       // "welcomePage.buttonBackground": "",
       // "welcomePage.buttonHoverBackground": ""
     },
-    semanticHighlighting: true,
+    semanticHighlighting: true
     /*
     tokenColors: [
       {
