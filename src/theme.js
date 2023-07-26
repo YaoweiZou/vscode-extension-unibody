@@ -1,5 +1,5 @@
-const lightColors = require("./colors/light.json");
-const darkColors = require("./colors/dark-colors.json");
+const lightColors = require("./colors/palette-light.json");
+const darkColors = require("./colors/palette-dark.json");
 
 function getColors(theme) {
   switch (theme) {
