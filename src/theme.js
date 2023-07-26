@@ -1,5 +1,5 @@
 const lightColors = require("./colors/light.json");
-const darkColors = require("./colors/dark.json");
+const darkColors = require("./colors/dark-colors.json");
 
 function getColors(theme) {
   switch (theme) {
@@ -23,13 +23,13 @@ function getTheme({ theme, name }) {
       focusBorder: color.blue70,
       foreground: color.gray120,
       disabledForeground: color.gray70,
-      // "widget.border": ,
-      // "widget.shadow": ,
+      // "widget.border": "",
+      "widget.shadow": color.transparent,
       "selection.background": color.blue40,
       descriptionForeground: color.gray90,
       errorForeground: color.red50,
       "icon.foreground": color.gray120,
-      // "sash.hoverBorder": "",
+      "sash.hoverBorder": color.blue70,
 
       /* Window border */
       // "window.activeBorder": "",
@@ -45,15 +45,15 @@ function getTheme({ theme, name }) {
       // "textSeparator.foreground": "",
 
       /* Action colors */
-      // "toolbar.hoverBackground": "",
+      "toolbar.hoverBackground": color.gray20,
       // "toolbar.hoverOutline": "",
-      // "toolbar.activeBackground": "",
+      "toolbar.activeBackground": color.gray20,
 
       /* Button control */
       "button.background": color.blue50,
-      "button.foreground": color.gray120,
-      // "button.border": transparent,
-      // "button.separator": "",
+      "button.foreground": color.white,
+      // "button.border": "",
+      "button.separator": color.gray100,
       "button.hoverBackground": color.blue60,
       // "button.secondaryForeground": "",
       // "button.secondaryBackground": "",
@@ -67,12 +67,12 @@ function getTheme({ theme, name }) {
       /* Dropdown control */
       "dropdown.background": color.gray20,
       "dropdown.listBackground": color.gray20,
-      "dropdown.border": color.gray60,
-      // "dropdown.foreground": "",
+      // "dropdown.border": "",
+      "dropdown.foreground": color.gray120,
 
       /* Input control */
       "input.background": color.gray20,
-      "input.border": color.gray60,
+      // "input.border": "",
       "input.foreground": color.gray120,
       "input.placeholderForeground": color.gray80,
       // "inputOption.activeBackground": "",
@@ -96,24 +96,24 @@ function getTheme({ theme, name }) {
       // "scrollbarSlider.hoverBackground": "",
 
       /* Badge */
-      // "badge.foreground": ,
-      // "badge.background": ,
+      // "badge.foreground": color.white,
+      // "badge.background": color.blue70,
 
       /* Progress bar */
       // "progressBar.background": "",
 
       /* Lists and trees */
-      // "list.activeSelectionBackground": "",
-      // "list.activeSelectionForeground": "",
+      "list.activeSelectionBackground": color.gray30,
+      "list.activeSelectionForeground": color.gray120,
       // "list.activeSelectionIconForeground": "",
       // "list.dropBackground": "",
       // "list.focusBackground": "",
       // "list.focusForeground": "",
       // "list.focusHighlightForeground": "",
-      // "list.focusOutline": "",
-      // "list.focusAndSelectionOutline": "",
+      "list.focusOutline": color.transparent,
+      "list.focusAndSelectionOutline": color.transparent,
       // "list.highlightForeground": "",
-      "list.hoverBackground": color.gray30,
+      "list.hoverBackground": color.gray20,
       // "list.hoverForeground": "",
       // "list.inactiveSelectionBackground": "",
       // "list.inactiveSelectionForeground": "",
@@ -139,17 +139,17 @@ function getTheme({ theme, name }) {
       "activityBar.background": color.gray10,
       // "activityBar.dropBorder": "",
       "activityBar.foreground": color.gray120,
-      // "activityBar.inactiveForeground": "",
+      "activityBar.inactiveForeground": color.gray70,
       // "activityBar.border": "",
-      // "activityBarBadge.background": "",
-      // "activityBarBadge.foreground": "",
+      "activityBarBadge.background": color.blue70,
+      "activityBarBadge.foreground": color.white,
       "activityBar.activeBorder": color.gray10,
       // "activityBar.activeBackground": "",
-      // "activityBar.activeFocusBorder": "",
+      "activityBar.activeFocusBorder": color.gray10,
 
       /* Profiles */
-      // "profileBadge.background": "",
-      // "profileBadge.foreground": "",
+      "profileBadge.background": "",
+      "profileBadge.foreground": "",
 
       /* Side Bar */
       "sideBar.background": color.gray10,
@@ -172,9 +172,9 @@ function getTheme({ theme, name }) {
       // "minimapSlider.background": "",
       // "minimapSlider.hoverBackground": "",
       // "minimapSlider.activeBackground": "",
-      // "minimapGutter.addedBackground": "",
-      // "minimapGutter.modifiedBackground": "",
-      // "minimapGutter.deletedBackground": "",
+      "minimapGutter.addedBackground": "#32d74b",
+      "minimapGutter.modifiedBackground": "#5ac8f5",
+      "minimapGutter.deletedBackground": "#ff453a",
 
       /* Editor Groups & Tabs */
       // "editorGroup.border": "",
@@ -218,7 +218,7 @@ function getTheme({ theme, name }) {
 
       /* Editor colors */
       "editor.background": color.gray10,
-      "editor.foreground": color.gray120,
+      "editor.foreground": color.gray110,
       "editorLineNumber.foreground": color.gray70,
       "editorLineNumber.activeForeground": color.gray110,
       "editor.lineHighlightBackground": color.gray20,
@@ -228,19 +228,19 @@ function getTheme({ theme, name }) {
       "statusBar.background": color.gray10,
       "statusBar.foreground": color.gray120,
       // "statusBar.border": "",
-      // "statusBar.debuggingBackground": "",
-      // "statusBar.debuggingForeground": "",
+      "statusBar.debuggingBackground": color.blue70,
+      // "statusBar.debuggingForeground": color.white,
       // "statusBar.debuggingBorder": "",
       // "statusBar.noFolderForeground": "",
       "statusBar.noFolderBackground": color.gray20,
       // "statusBar.noFolderBorder": "",
-      "statusBarItem.activeBackground": "",
+      // "statusBarItem.activeBackground": "",
       // "statusBarItem.hoverBackground": "",
       // "statusBarItem.prominentForeground": "",
       // "statusBarItem.prominentBackground": "",
       // "statusBarItem.prominentHoverBackground": "",
-      // "statusBarItem.remoteBackground": "",
-      // "statusBarItem.remoteForeground": "",
+      "statusBarItem.remoteBackground": color.blue70,
+      "statusBarItem.remoteForeground": color.white,
       // "statusBarItem.errorBackground": "",
       // "statusBarItem.errorForeground": "",
       // "statusBarItem.warningBackground": "",
@@ -253,22 +253,34 @@ function getTheme({ theme, name }) {
 
       /* Title Bar colors */
       "titleBar.activeBackground": color.gray10,
-      "titleBar.activeForeground": color.gray120,
+      "titleBar.activeForeground": color.gray100,
       "titleBar.inactiveBackground": color.gray10,
-      // "titleBar.inactiveForeground": "",
+      "titleBar.inactiveForeground": color.gray80,
       // "titleBar.border": "",
 
       /* Menu Bar colors */
-      // "menubar.selectionForeground": "",
-      // "menubar.selectionBackground": "",
+      "menubar.selectionForeground": color.gray110,
+      "menubar.selectionBackground": color.gray20,
       // "menubar.selectionBorder": "",
-      // "menu.foreground": "",
+      "menu.foreground": color.gray110,
       "menu.background": color.gray20,
-      // "menu.selectionForeground": "",
+      "menu.selectionForeground": color.gray110,
       "menu.selectionBackground": color.blue40,
       // "menu.selectionBorder": "",
-      // "menu.separatorBackground": "",
-      // "menu.border": "",
+      "menu.separatorBackground": color.gray60,
+      "menu.border": color.gray50,
+
+      /* Git colors */
+      "gitDecoration.addedResourceForeground": "#32d74b79", // 新增且暂存的文件，dark.green 62%
+      "gitDecoration.modifiedResourceForeground": "#5ac8f5", // 修改的文件和存在问题的文件，dark.cyan，
+      "gitDecoration.deletedResourceForeground": "#ff453a", // 已删除的文件，dark.red划线
+      "gitDecoration.renamedResourceForeground": "#ff9f0a", // 重命名或复制的二进制文件，dark.orange
+      "gitDecoration.stageModifiedResourceForeground": "#5ac8f579", // 修改且暂存的文件，dark.cyan 62%
+      "gitDecoration.stageDeletedResourceForeground": "#ff453a", // 已删除且暂存的文件，dark.red划线
+      "gitDecoration.untrackedResourceForeground": "#32d74b", // 新增的文件，dark.green
+      "gitDecoration.ignoredResourceForeground": "#636366", // 忽略的文件，dark.gary2
+      "gitDecoration.conflictingResourceForeground": "#ffd60a", // 存在冲突的文件，dark.yellow
+      "gitDecoration.submoduleResourceForeground": "#ac8e68" // 子模块文件，dark.brown
     },
     semanticHighlighting: true
     /*

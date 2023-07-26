@@ -1,7 +1,21 @@
 {
     "name": "Unibody Light",
     "colors": {
-        "statusBarItem.activeBackground": ""
+        "profileBadge.background": "",
+        "profileBadge.foreground": "",
+        "minimapGutter.addedBackground": "#32d74b",
+        "minimapGutter.modifiedBackground": "#5ac8f5",
+        "minimapGutter.deletedBackground": "#ff453a",
+        "gitDecoration.addedResourceForeground": "#32d74b79",
+        "gitDecoration.modifiedResourceForeground": "#5ac8f5",
+        "gitDecoration.deletedResourceForeground": "#ff453a",
+        "gitDecoration.renamedResourceForeground": "#ff9f0a",
+        "gitDecoration.stageModifiedResourceForeground": "#5ac8f579",
+        "gitDecoration.stageDeletedResourceForeground": "#ff453a",
+        "gitDecoration.untrackedResourceForeground": "#32d74b",
+        "gitDecoration.ignoredResourceForeground": "#636366",
+        "gitDecoration.conflictingResourceForeground": "#ffd60a",
+        "gitDecoration.submoduleResourceForeground": "#ac8e68"
     },
     "semanticHighlighting": true
 }
