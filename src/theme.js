@@ -12,12 +12,13 @@ function getColors(theme) {
   }
 }
 
-// https://code.visualstudio.com/api/references/theme-color
 function getTheme({ theme, name }) {
   const color = getColors(theme);
 
   return {
+    $schema: "vscode://schemas/color-theme",
     name: name,
+    // https://code.visualstudio.com/api/references/theme-color
     colors: {
       /* Base colors */
       focusBorder: color.blue70,
@@ -285,6 +286,26 @@ function getTheme({ theme, name }) {
       "menu.separatorBackground": color.gray60,
       "menu.border": color.gray50,
 
+      /* Command Center colors */
+      // "commandCenter.foreground": color.red60,
+      // "commandCenter.activeForeground": color.white,
+      // "commandCenter.background": color.red60,
+      // "commandCenter.activeBackground": "",
+      // "commandCenter.border": "",
+      // "commandCenter.inactiveForeground": "",
+      // "commandCenter.inactiveBorder": "",
+      // "commandCenter.activeBorder": "",
+
+      /* Quick picker colors */
+      "pickerGroup.border": color.gray60,
+      "pickerGroup.foreground": color.white,
+      "quickInput.background": color.gray20,
+      "quickInput.foreground": color.gray110,
+      "quickInputList.focusBackground": color.blue40,
+      "quickInputList.focusForeground": color.gray110,
+      "quickInputList.focusIconForeground": color.white,
+      "quickInputTitle.background": "",
+
       /* Git colors */
       "gitDecoration.addedResourceForeground": "#32d74b79", // 新增且暂存的文件，dark.green 62%
       "gitDecoration.modifiedResourceForeground": "#5ac8f5", // 修改的文件和存在问题的文件，dark.cyan，
@@ -297,349 +318,560 @@ function getTheme({ theme, name }) {
       "gitDecoration.conflictingResourceForeground": "#ffd60a", // 存在冲突的文件，dark.yellow
       "gitDecoration.submoduleResourceForeground": "#ac8e68" // 子模块文件，dark.brown
     },
-    semanticHighlighting: true
-    /*
     tokenColors: [
       {
-        scope: ["comment", "punctuation.definition.comment", "string.comment"],
+        name: "comment",
+        scope: ["comment", "string.quoted.docstring"],
         settings: {
-          foreground: lightDark(scale.gray[5], scale.gray[3])
+          foreground: color.gray90
+        }
+      },
+      //   {
+      //     name: "comment.doc.tag",
+      //     scope: ["comment"],
+      //     settings: {
+      //       // 569cd6
+      //       foreground: color.cyan
+      //     }
+      //   },
+      //   {
+      //     name: "comment.doc.value",
+      //     scope: ["comment"],
+      //     settings: {
+      //       // 9cdcfe
+      //       foreground: color.gray120
+      //     }
+      //   },
+      {
+        scope: ["meta.embedded", "source.groovy.embedded", "string meta.image.inline.markdown"],
+        settings: {
+          foreground: "#D4D4D4"
         }
       },
       {
-        scope: ["constant.other.placeholder", "constant.character"],
+        scope: "emphasis",
         settings: {
-          foreground: lightDark(scale.red[5], scale.red[3])
+          fontStyle: "italic"
+        }
+      },
+      {
+        scope: "strong",
+        settings: {
+          fontStyle: "bold"
+        }
+      },
+      {
+        scope: "header",
+        settings: {
+          foreground: "#000080"
+        }
+      },
+      {
+        scope: "constant.language",
+        settings: {
+          foreground: "#569cd6"
         }
       },
       {
         scope: [
-          "constant",
-          "entity.name.constant",
-          "variable.other.constant",
+          "constant.numeric",
           "variable.other.enummember",
-          "variable.language",
-          "entity"
+          "keyword.operator.plus.exponent",
+          "keyword.operator.minus.exponent"
         ],
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
+          foreground: "#b5cea8"
         }
       },
       {
-        scope: ["entity.name", "meta.export.default", "meta.definition.variable"],
+        scope: "constant.regexp",
         settings: {
-          foreground: lightDark(scale.orange[6], scale.orange[2])
+          foreground: "#646695"
+        }
+      },
+      {
+        scope: "entity.name.tag",
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "entity.name.tag.css",
+        settings: {
+          foreground: "#d7ba7d"
+        }
+      },
+      {
+        scope: "entity.other.attribute-name",
+        settings: {
+          foreground: "#9cdcfe"
         }
       },
       {
         scope: [
-          "variable.parameter.function",
-          "meta.jsx.children",
-          "meta.block",
-          "meta.tag.attributes",
-          "entity.name.constant",
-          "meta.object.member",
-          "meta.embedded.expression"
+          "entity.other.attribute-name.class.css",
+          "entity.other.attribute-name.class.mixin.css",
+          "entity.other.attribute-name.id.css",
+          "entity.other.attribute-name.parent-selector.css",
+          "entity.other.attribute-name.pseudo-class.css",
+          "entity.other.attribute-name.pseudo-element.css",
+          "source.css.less entity.other.attribute-name.id",
+          "entity.other.attribute-name.scss"
         ],
         settings: {
-          foreground: color.fg.default
+          foreground: "#d7ba7d"
         }
       },
       {
-        scope: "entity.name.function",
+        scope: "invalid",
         settings: {
-          foreground: lightDark(scale.purple[5], scale.purple[2])
+          foreground: "#f44747"
         }
       },
       {
-        scope: ["entity.name.tag", "support.class.component"],
+        scope: "markup.underline",
         settings: {
-          foreground: lightDark(scale.green[6], scale.green[1])
-        }
-      },
-      {
-        scope: "keyword",
-        settings: {
-          foreground: lightDark(scale.red[5], scale.red[3])
-        }
-      },
-      {
-        scope: ["storage", "storage.type"],
-        settings: {
-          foreground: lightDark(scale.red[5], scale.red[3])
-        }
-      },
-      {
-        scope: ["storage.modifier.package", "storage.modifier.import", "storage.type.java"],
-        settings: {
-          foreground: color.fg.default
-        }
-      },
-      {
-        scope: ["string", "string punctuation.section.embedded source"],
-        settings: {
-          foreground: lightDark(scale.blue[8], scale.blue[1])
-        }
-      },
-      {
-        scope: "support",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "meta.property-name",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "variable",
-        settings: {
-          foreground: lightDark(scale.orange[6], scale.orange[2])
-        }
-      },
-      {
-        scope: "variable.other",
-        settings: {
-          foreground: color.fg.default
-        }
-      },
-      {
-        scope: "invalid.broken",
-        settings: {
-          fontStyle: "italic",
-          foreground: lightDark(scale.red[7], scale.red[2])
-        }
-      },
-      {
-        scope: "invalid.deprecated",
-        settings: {
-          fontStyle: "italic",
-          foreground: lightDark(scale.red[7], scale.red[2])
-        }
-      },
-      {
-        scope: "invalid.illegal",
-        settings: {
-          fontStyle: "italic",
-          foreground: lightDark(scale.red[7], scale.red[2])
-        }
-      },
-      {
-        scope: "invalid.unimplemented",
-        settings: {
-          fontStyle: "italic",
-          foreground: lightDark(scale.red[7], scale.red[2])
-        }
-      },
-      {
-        scope: "carriage-return",
-        settings: {
-          fontStyle: "italic underline",
-          background: lightDark(scale.red[5], scale.red[3]),
-          foreground: lightDark(scale.gray[0], scale.gray[0]),
-          content: "^M"
-        }
-      },
-      {
-        scope: "message.error",
-        settings: {
-          foreground: lightDark(scale.red[7], scale.red[2])
-        }
-      },
-      {
-        scope: "string variable",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: ["source.regexp", "string.regexp"],
-        settings: {
-          foreground: lightDark(scale.blue[8], scale.blue[1])
-        }
-      },
-      {
-        scope: [
-          "string.regexp.character-class",
-          "string.regexp constant.character.escape",
-          "string.regexp source.ruby.embedded",
-          "string.regexp string.regexp.arbitrary-repitition"
-        ],
-        settings: {
-          foreground: lightDark(scale.blue[8], scale.blue[1])
-        }
-      },
-      {
-        scope: "string.regexp constant.character.escape",
-        settings: {
-          fontStyle: "bold",
-          foreground: lightDark(scale.green[6], scale.green[1])
-        }
-      },
-      {
-        scope: "support.constant",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "support.variable",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "support.type.property-name.json",
-        settings: {
-          foreground: lightDark(scale.green[6], scale.green[1])
-        }
-      },
-      {
-        scope: "meta.module-reference",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "punctuation.definition.list.begin.markdown",
-        settings: {
-          foreground: lightDark(scale.orange[6], scale.orange[2])
-        }
-      },
-      {
-        scope: ["markup.heading", "markup.heading entity.name"],
-        settings: {
-          fontStyle: "bold",
-          foreground: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "markup.quote",
-        settings: {
-          foreground: lightDark(scale.green[6], scale.green[1])
-        }
-      },
-      {
-        scope: "markup.italic",
-        settings: {
-          fontStyle: "italic",
-          foreground: color.fg.default
+          fontStyle: "underline"
         }
       },
       {
         scope: "markup.bold",
         settings: {
           fontStyle: "bold",
-          foreground: color.fg.default
+          foreground: "#569cd6"
         }
       },
       {
-        scope: ["markup.underline"],
+        scope: "markup.heading",
         settings: {
-          fontStyle: "underline"
+          fontStyle: "bold",
+          foreground: "#569cd6"
         }
       },
       {
-        scope: ["markup.strikethrough"],
+        scope: "markup.italic",
+        settings: {
+          fontStyle: "italic"
+        }
+      },
+      {
+        scope: "markup.strikethrough",
         settings: {
           fontStyle: "strikethrough"
         }
       },
       {
+        scope: "markup.inserted",
+        settings: {
+          foreground: "#b5cea8"
+        }
+      },
+      {
+        scope: "markup.deleted",
+        settings: {
+          foreground: "#ce9178"
+        }
+      },
+      {
+        scope: "markup.changed",
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "punctuation.definition.quote.begin.markdown",
+        settings: {
+          foreground: "#6A9955"
+        }
+      },
+      {
+        scope: "punctuation.definition.list.begin.markdown",
+        settings: {
+          foreground: "#6796e6"
+        }
+      },
+      {
         scope: "markup.inline.raw",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
+          foreground: "#ce9178"
         }
       },
       {
-        scope: ["markup.deleted", "meta.diff.header.from-file", "punctuation.definition.deleted"],
+        name: "brackets of XML/HTML tags",
+        scope: "punctuation.definition.tag",
         settings: {
-          background: lightDark(scale.red[0], scale.red[9]),
-          foreground: lightDark(scale.red[7], scale.red[2])
+          foreground: "#808080"
         }
       },
       {
-        scope: ["punctuation.section.embedded"],
+        scope: ["meta.preprocessor", "entity.name.function.preprocessor"],
         settings: {
-          foreground: lightDark(scale.red[5], scale.red[3])
+          foreground: "#569cd6"
         }
       },
       {
-        scope: ["markup.inserted", "meta.diff.header.to-file", "punctuation.definition.inserted"],
+        scope: "meta.preprocessor.string",
         settings: {
-          background: lightDark(scale.green[0], scale.green[9]),
-          foreground: lightDark(scale.green[6], scale.green[1])
+          foreground: "#ce9178"
         }
       },
       {
-        scope: ["markup.changed", "punctuation.definition.changed"],
+        scope: "meta.preprocessor.numeric",
         settings: {
-          background: lightDark(scale.orange[1], scale.orange[8]),
-          foreground: lightDark(scale.orange[6], scale.orange[2])
+          foreground: "#b5cea8"
         }
       },
       {
-        scope: ["markup.ignored", "markup.untracked"],
+        scope: "meta.structure.dictionary.key.python",
         settings: {
-          foreground: lightDark(scale.gray[1], scale.gray[8]),
-          background: lightDark(scale.blue[6], scale.blue[2])
-        }
-      },
-      {
-        scope: "meta.diff.range",
-        settings: {
-          foreground: lightDark(scale.purple[5], scale.purple[2]),
-          fontStyle: "bold"
+          foreground: "#9cdcfe"
         }
       },
       {
         scope: "meta.diff.header",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
+          foreground: "#569cd6"
         }
       },
       {
-        scope: "meta.separator",
+        scope: "storage",
         settings: {
-          fontStyle: "bold",
-          foreground: lightDark(scale.blue[6], scale.blue[2])
+          foreground: "#569cd6"
         }
       },
       {
-        scope: "meta.output",
+        scope: "storage.type",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2])
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: ["storage.modifier", "keyword.operator.noexcept"],
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: ["string", "meta.embedded.assembly"],
+        settings: {
+          foreground: "#ce9178"
+        }
+      },
+      {
+        scope: "string.tag",
+        settings: {
+          foreground: "#ce9178"
+        }
+      },
+      {
+        scope: "string.value",
+        settings: {
+          foreground: "#ce9178"
+        }
+      },
+      {
+        scope: "string.regexp",
+        settings: {
+          foreground: "#d16969"
+        }
+      },
+      {
+        name: "String interpolation",
+        scope: [
+          "punctuation.definition.template-expression.begin",
+          "punctuation.definition.template-expression.end",
+          "punctuation.section.embedded"
+        ],
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        name: "Reset JavaScript string interpolation expression",
+        scope: ["meta.template.expression"],
+        settings: {
+          foreground: "#d4d4d4"
         }
       },
       {
         scope: [
-          "brackethighlighter.tag",
-          "brackethighlighter.curly",
-          "brackethighlighter.round",
-          "brackethighlighter.square",
-          "brackethighlighter.angle",
-          "brackethighlighter.quote"
+          "support.type.vendored.property-name",
+          "support.type.property-name",
+          "variable.css",
+          "variable.scss",
+          "variable.other.less",
+          "source.coffee.embedded"
         ],
         settings: {
-          foreground: lightDark(scale.gray[6], scale.gray[3])
+          foreground: "#9cdcfe"
         }
       },
       {
-        scope: "brackethighlighter.unmatched",
+        scope: "keyword",
         settings: {
-          foreground: lightDark(scale.red[7], scale.red[2])
+          foreground: "#569cd6"
         }
       },
       {
-        scope: ["constant.other.reference.link", "string.other.link"],
+        scope: "keyword.control",
         settings: {
-          foreground: lightDark(scale.blue[8], scale.blue[1])
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "keyword.operator",
+        settings: {
+          foreground: "#d4d4d4"
+        }
+      },
+      {
+        scope: [
+          "keyword.operator.new",
+          "keyword.operator.expression",
+          "keyword.operator.cast",
+          "keyword.operator.sizeof",
+          "keyword.operator.alignof",
+          "keyword.operator.typeid",
+          "keyword.operator.alignas",
+          "keyword.operator.instanceof",
+          "keyword.operator.logical.python",
+          "keyword.operator.wordlike"
+        ],
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "keyword.other.unit",
+        settings: {
+          foreground: "#b5cea8"
+        }
+      },
+      {
+        scope: ["punctuation.section.embedded.begin.php", "punctuation.section.embedded.end.php"],
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "support.function.git-rebase",
+        settings: {
+          foreground: "#9cdcfe"
+        }
+      },
+      {
+        scope: "constant.sha.git-rebase",
+        settings: {
+          foreground: "#b5cea8"
+        }
+      },
+      {
+        name: "coloring of the Java import and package identifiers",
+        scope: [
+          "storage.modifier.import.java",
+          "variable.language.wildcard.java",
+          "storage.modifier.package.java"
+        ],
+        settings: {
+          foreground: "#d4d4d4"
+        }
+      },
+      {
+        name: "this.self",
+        scope: "variable.language",
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      // ---
+      {
+        name: "Function declarations",
+        scope: [
+          "entity.name.function",
+          "support.function",
+          "support.constant.handlebars",
+          "source.powershell variable.other.member",
+          "entity.name.operator.custom-literal"
+        ],
+        settings: {
+          foreground: "#DCDCAA"
+        }
+      },
+      {
+        name: "Types declaration and references",
+        scope: [
+          "support.class",
+          "support.type",
+          "entity.name.type",
+          "entity.name.namespace",
+          "entity.other.attribute",
+          "entity.name.scope-resolution",
+          "entity.name.class",
+          "storage.type.numeric.go",
+          "storage.type.byte.go",
+          "storage.type.boolean.go",
+          "storage.type.string.go",
+          "storage.type.uintptr.go",
+          "storage.type.error.go",
+          "storage.type.rune.go",
+          "storage.type.cs",
+          "storage.type.generic.cs",
+          "storage.type.modifier.cs",
+          "storage.type.variable.cs",
+          "storage.type.annotation.java",
+          "storage.type.generic.java",
+          "storage.type.java",
+          "storage.type.object.array.java",
+          "storage.type.primitive.array.java",
+          "storage.type.primitive.java",
+          "storage.type.token.java",
+          "storage.type.groovy",
+          "storage.type.annotation.groovy",
+          "storage.type.parameters.groovy",
+          "storage.type.generic.groovy",
+          "storage.type.object.array.groovy",
+          "storage.type.primitive.array.groovy",
+          "storage.type.primitive.groovy"
+        ],
+        settings: {
+          foreground: "#4EC9B0"
+        }
+      },
+      {
+        name: "Types declaration and references, TS grammar specific",
+        scope: [
+          "meta.type.cast.expr",
+          "meta.type.new.expr",
+          "support.constant.math",
+          "support.constant.dom",
+          "support.constant.json",
+          "entity.other.inherited-class"
+        ],
+        settings: {
+          foreground: "#4EC9B0"
+        }
+      },
+      {
+        name: "Control flow / Special keywords",
+        scope: [
+          "keyword.control",
+          "source.cpp keyword.operator.new",
+          "keyword.operator.delete",
+          "keyword.other.using",
+          "keyword.other.operator",
+          "entity.name.operator"
+        ],
+        settings: {
+          foreground: "#C586C0"
+        }
+      },
+      {
+        name: "Variable and parameter name",
+        scope: [
+          "variable",
+          "meta.definition.variable.name",
+          "support.variable",
+          "entity.name.variable",
+          "constant.other.placeholder"
+        ],
+        settings: {
+          foreground: "#9CDCFE"
+        }
+      },
+      {
+        name: "Constants and enums",
+        scope: ["variable.other.constant", "variable.other.enummember"],
+        settings: {
+          foreground: "#4FC1FF"
+        }
+      },
+      {
+        name: "Object keys, TS grammar specific",
+        scope: ["meta.object-literal.key"],
+        settings: {
+          foreground: "#9CDCFE"
+        }
+      },
+      {
+        name: "CSS property value",
+        scope: [
+          "support.constant.property-value",
+          "support.constant.font-name",
+          "support.constant.media-type",
+          "support.constant.media",
+          "constant.other.color.rgb-value",
+          "constant.other.rgb-value",
+          "support.constant.color"
+        ],
+        settings: {
+          foreground: "#CE9178"
+        }
+      },
+      {
+        name: "Regular expression groups",
+        scope: [
+          "punctuation.definition.group.regexp",
+          "punctuation.definition.group.assertion.regexp",
+          "punctuation.definition.character-class.regexp",
+          "punctuation.character.set.begin.regexp",
+          "punctuation.character.set.end.regexp",
+          "keyword.operator.negation.regexp",
+          "support.other.parenthesis.regexp"
+        ],
+        settings: {
+          foreground: "#CE9178"
+        }
+      },
+      {
+        scope: [
+          "constant.character.character-class.regexp",
+          "constant.other.character-class.set.regexp",
+          "constant.other.character-class.regexp",
+          "constant.character.set.regexp"
+        ],
+        settings: {
+          foreground: "#d16969"
+        }
+      },
+      {
+        scope: ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
+        settings: {
+          foreground: "#DCDCAA"
+        }
+      },
+      {
+        scope: "keyword.operator.quantifier.regexp",
+        settings: {
+          foreground: "#d7ba7d"
+        }
+      },
+      {
+        scope: ["constant.character", "constant.other.option"],
+        settings: {
+          foreground: "#569cd6"
+        }
+      },
+      {
+        scope: "constant.character.escape",
+        settings: {
+          foreground: "#d7ba7d"
+        }
+      },
+      {
+        scope: "entity.name.label",
+        settings: {
+          foreground: "#C8C8C8"
         }
       }
-    ]
-    */
+    ],
+    // https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
+    semanticHighlighting: true,
+    semanticTokenColors: {
+      newOperator: "#C586C0",
+      stringLiteral: "#ce9178",
+      customLiteral: "#DCDCAA",
+      numberLiteral: "#b5cea8"
+    }
   };
 }
 
